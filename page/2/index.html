@@ -53,6 +53,8 @@
   
 
   
+
+  
   
   
 
@@ -65,6 +67,9 @@
 
   
     <header id="header">
+
+	<!-- 背景图模式 -->
+	
 
     
       <div id="intrologo" class="intro-logo" style="background-position:center; background-repeat:no-repeat; background-image: url(); background-size: auto 100%;">
@@ -189,6 +194,18 @@
       x.scale(pr, pr)
       x.globalAlpha = 0.6
 
+      <!-- 折线Polyline背景 -->
+      
+		 function redraw(){
+		 	var pattern = Trianglify({
+				width: window.innerWidth,
+				height: window.innerHeight
+			});
+            pattern.canvas(c)
+        }
+        document.getElementById("intrologo").onclick = redraw
+        document.getElementById("intrologo").ontouchstart = redraw
+		redraw()
       
     </script>
     
